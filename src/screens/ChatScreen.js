@@ -1,4 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+// Updated: 2026-04-23 03:26
+const AI_URL = "https://bot2.ferreteriaelhogar.com/v1/chat/completions";
+const AI_KEY = "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";
 import {
   View,
   Text,
@@ -36,11 +39,11 @@ export const ChatScreen = ({ t, config }) => {
     setIsTyping(true);
 
     try {
-      const response = await fetch(process.env.EXPO_PUBLIC_AI_AGENT_URL, {
+      const response = await fetch(AI_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.EXPO_PUBLIC_AI_AGENT_KEY}`
+          'Authorization': `Bearer ${AI_KEY}`
         },
         body: JSON.stringify({
           model: process.env.EXPO_PUBLIC_AI_MODEL || 'openai/gpt-4o-mini',
