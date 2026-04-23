@@ -1,0 +1,54 @@
+name: Local Build (Bypass Expo Limits)
+
+on:
+  workflow_dispatch: # Solo manual para ahorrar recursos
+  push:
+    tags:
+      - 'v*' # Trigger automático cuando crees un tag de versión
+
+jobs:
+  build_apk:
+    name: Build APK Locally on GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: 🏗 Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: 🏗 Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v8
+        with:
+          expo-version: latest
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🚀 Build APK Locally
+        run: |
+          npx eas-cli build --platform android --profile preview --local --non-interactive --output=mebot-inventory.apk
+
+      - name: 📤 Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mebot-apk
+          path: mebot-inventory.apk

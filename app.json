@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "MeBot Inventory",
+    "slug": "nativo-inventory-dev",
+    "scheme": "com.nativoinventory.mebot",
+    "version": "1.0.0",
+    "jsEngine": "hermes",
+    "updates": {
+      "enabled": false
+    },
+    "orientation": "portrait",
+    "icon": "./static/logo-branded.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./static/logo-branded.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#080f1e"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nativoinventory.mebot"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./static/logo-branded.png",
+        "backgroundColor": "#080f1e"
+      },
+      "package": "com.nativoinventory.mebot",
+      "permissions": [
+        "CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "versionCode": 25
+    },
+    "web": {
+      "favicon": "./static/logo-branded.png"
+    },
+    "plugins": [
+      "./withAdiRegistration",
+      "expo-secure-store",
+      "expo-audio",
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d7b850c7-f95d-47f7-b7c1-7d97bb298481"
+      }
+    },
+    "experiments": {
+      "baseUrl": "/inventory-app"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+node_modules/
+.expo/
+dist/
+_expo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+publish_*.log
+*.log
+*.pem
+.env
+.DS_Store
+__pycache__/
+*.pyc
+
+# Temp QA files
+qa_*.json
+qa_*.txt
+bitacora_*.json
+direct_qa_*.json
+direct_qa_*.txt
+*.json.bak
+node_modules

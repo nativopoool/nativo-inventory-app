@@ -1,0 +1,64 @@
+model_list:
+  # Primary model - StepFun Flash (Active)
+  - model_name: "stepfun/step-3.5-flash:free"
+    litellm_params:
+      model: "openrouter/stepfun/step-3.5-flash:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+      headers:
+        HTTP-Referer: "https://bot2.ferreteriaelhogar.com"
+        X-Title: "OpenClaw (bot2)"
+
+  # Fallback models
+  - model_name: "qwen/qwen3.6-plus:free"
+    litellm_params:
+      model: "openrouter/qwen/qwen3.6-plus:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+
+  - model_name: "google/gemma-3-27b-it:free"
+    litellm_params:
+      model: "openrouter/google/gemma-3-27b-it:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+
+  # Alias for compatibility (OpenClaw may request this name)
+  - model_name: "openai/gpt-4o-mini"
+    litellm_params:
+      model: "openrouter/stepfun/step-3.5-flash:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+
+  # Embedding model
+  - model_name: "text-embedding-3-small"
+    litellm_params:
+      model: "openai/text-embedding-3-small"
+      api_key: "os.environ/LLM_KEY"
+
+  # Redirect standard Claude/OpenAI calls to the primary model
+  - model_name: "claude-3-5-sonnet-20240620"
+    litellm_params:
+      model: "openrouter/stepfun/step-3.5-flash:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+
+  - model_name: "claude-3-opus-20240229"
+    litellm_params:
+      model: "openrouter/stepfun/step-3.5-flash:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+
+  # Catch-all (any other model name)
+  - model_name: "*"
+    litellm_params:
+      model: "openrouter/stepfun/step-3.5-flash:free"
+      api_key: "os.environ/LLM_KEY"
+      drop_params: true
+
+general_settings:
+  master_key: "os.environ/LITELLM_MASTER_KEY"
+
+litellm_settings:
+  request_timeout: 600
+  drop_params: true
+  num_retries: 2

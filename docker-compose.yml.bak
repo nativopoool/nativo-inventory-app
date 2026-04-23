@@ -1,0 +1,162 @@
+version: '3.3'
+
+services:
+  litellm:
+    image: ghcr.io/berriai/litellm:main-v1.79.3-stable
+    container_name: bot2-litellm
+    restart: unless-stopped
+    environment:
+      - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY}
+      - OPENAI_API_KEY=${LLM_KEY}
+      - LLM_KEY=${LLM_KEY}
+      - LITELLM_PROXY_EXTRAS=false
+      - LITELLM_MIGRATIONS=false
+      - LITELLM_TELEMETRY=False
+      - LITELLM_DATABASE_URL=None
+      - LITELLM_LOG=INFO
+    ports:
+      - "4002:4000"
+    networks:
+      - openclaw-internal
+      - openclaw-external
+    volumes:
+      - ./litellm-config.yaml:/app/config.yaml:ro
+    command: ["--config", "/app/config.yaml", "--port", "4000", "--host", "0.0.0.0"]
+    security_opt:
+      - no-new-privileges:true
+    read_only: false
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=100m
+      - /usr/lib/python3.13/site-packages/litellm_proxy_extras/migrations:rw,size=10m
+    mem_limit: 512m
+    cpus: 0.5
+
+  redis:
+    image: docker.io/library/redis:alpine
+    container_name: bot2-redis
+    restart: unless-stopped
+    volumes:
+      - ./openclaw-redis:/data
+    networks:
+      - openclaw-internal
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  oauth2-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0
+    container_name: bot2-oauth2
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:4183:4180"
+    env_file: ".env.ferreteriaelhogar2"
+    environment:
+      - OAUTH2_PROXY_PROVIDER=google
+      - OAUTH2_PROXY_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - OAUTH2_PROXY_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - OAUTH2_PROXY_COOKIE_SECRET=${COOKIE_SECRET}
+      - OAUTH2_PROXY_EMAIL_DOMAINS=*
+      - OAUTH2_PROXY_HTTP_ADDRESS=0.0.0.0:4180
+      - OAUTH2_PROXY_REDIRECT_URL=https://bot2.ferreteriaelhogar.com/oauth2/callback
+      - OAUTH2_PROXY_REVERSE_PROXY=true
+      - OAUTH2_PROXY_SET_XAUTHREQUEST=true
+      - OAUTH2_PROXY_SET_AUTHORIZATION_HEADER=true
+      - OAUTH2_PROXY_PASS_AUTHORIZATION_HEADER=true
+      - OAUTH2_PROXY_PASS_USER_HEADERS=true
+      - OAUTH2_PROXY_USER_ID_CLAIM=email
+      - OAUTH2_PROXY_UPSTREAM=http://bot2-agent:18789
+      - OAUTH2_PROXY_EMAIL_CASE_INSENSITIVE=true
+      - OAUTH2_PROXY_COOKIE_SECURE=true
+      - OAUTH2_PROXY_COOKIE_SAMESITE=lax
+      - OAUTH2_PROXY_AUTHENTICATED_EMAILS_FILE=/etc/oauth2-proxy/authenticated-emails.txt
+    networks:
+      - openclaw-internal
+      - openclaw-external
+    volumes:
+      - ./authenticated-emails.txt:/etc/oauth2-proxy/authenticated-emails.txt:ro
+
+  openclaw:
+    image: ${OPENCLAW_IMAGE:-localhost/openclaw-agent:local}
+    container_name: bot2-agent
+    restart: unless-stopped
+    ports:
+      - "18791:18789"
+      - "127.0.0.1:4003:4001"
+    networks:
+      - openclaw-internal
+      - openclaw-external
+    volumes:
+      - /home/openclaw/bot2-data:/home/node/.openclaw
+      - /home/openclaw/bot2-data/ssh:/home/node/.ssh
+      - /home/openclaw/workspace:/opt/openclaw/workspace
+      - /home/openclaw/bot2-docker/setup-agent.sh:/home/node/setup-agent.sh:ro
+      - /home/openclaw/bot2-docker/smart_proxy.py:/home/node/smart_proxy.py:ro
+    working_dir: /home/node
+    user: root
+    env_file: ".env.ferreteriaelhogar2"
+    command: /home/node/setup-agent.sh
+    environment:
+      - NODE_ENV=production
+      - NODE_PATH=/usr/local/lib/node_modules
+      - NODE_OPTIONS=--max-old-space-size=2048 --import /home/node/.openclaw/proxy-patch.mjs
+      - OPENCLAW_GATEWAY_TOKEN=${OPENCLAW_GATEWAY_TOKEN}
+      - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY}
+      - OPENCLAW_PRIMARY_MODEL=${LLM_MODEL}
+      - OPENROUTER_API_KEY=${LITELLM_MASTER_KEY}
+      - OPENROUTER_BASE_URL=http://bot2-litellm:4000
+      - OPENAI_API_KEY=${LLM_KEY}
+      - OPENAI_BASE_URL=http://bot2-litellm:4000/v1
+      - ANTHROPIC_API_KEY=${LITELLM_MASTER_KEY}
+      - ANTHROPIC_API_BASE=http://bot2-litellm:4000/v1
+      - ANTHROPIC_BASE_URL=http://bot2-litellm:4000/v1
+      - DATABASE_URL=${DATABASE_URL}
+      - OPENPROSE_POSTGRES_URL=${OPENPROSE_POSTGRES_URL}
+      - REDIS_URL=redis://bot2-redis:6379
+      - HOME=/home/node
+      - BRAND_TITLE=${BRAND_TITLE}
+      - BRAND_SUBTITLE=${BRAND_SUBTITLE}
+      - BRAND_LOGO_URL=${BRAND_LOGO_URL}
+    depends_on:
+      - litellm
+      - redis
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 3g
+    cpus: 1.5
+
+  filebrowser:
+    image: docker.io/filebrowser/filebrowser:latest
+    container_name: bot2-filebrowser
+    user: "0:0"
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8882:8888"
+    networks:
+      - openclaw-internal
+    volumes:
+      - /home/openclaw:/srv
+      - /home/openclaw/bot2-docker/filebrowser.db:/database/filebrowser.db
+      - ./filebrowser.json:/config.json:ro
+    command:
+      - "--config=/config.json"
+      - "--database=/database/filebrowser.db"
+    depends_on:
+      - openclaw
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8888/filebrowser/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  filebrowser-db:
+
+networks:
+  openclaw-internal:
+    driver: bridge
+    internal: true
+  
+  openclaw-external:
+    driver: bridge

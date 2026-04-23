@@ -1,0 +1,1335 @@
+- generic [ref=e66]:
+  - banner [ref=e67]:
+    - generic [ref=e68]:
+      - generic [ref=e72]:
+        - generic [ref=e73]: OpenClaw
+        - generic [ref=e74]: ›
+        - generic [ref=e75]: Chat
+      - generic [ref=e76]:
+        - button "Open command palette" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: Search
+          - generic [ref=e79]: ⌘K
+        - group "Color mode" [ref=e81]:
+          - 'button "Color mode: System" [pressed] [ref=e82] [cursor=pointer]':
+            - img [ref=e83]
+          - 'button "Color mode: Light" [ref=e85] [cursor=pointer]':
+            - img [ref=e86]
+          - 'button "Color mode: Dark" [ref=e92] [cursor=pointer]':
+            - img [ref=e93]
+  - complementary [ref=e96]:
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - img "OpenClaw" [ref=e100]
+          - generic [ref=e101]:
+            - generic [ref=e102]: Control
+            - generic [ref=e103]: OpenClaw
+        - button "Collapse sidebar" [ref=e104] [cursor=pointer]:
+          - img [ref=e106]
+      - navigation [ref=e110]:
+        - generic [ref=e111]:
+          - button "Chat" [expanded] [ref=e112] [cursor=pointer]:
+            - generic [ref=e113]: Chat
+            - img [ref=e115]
+          - link "Chat" [ref=e118] [cursor=pointer]:
+            - /url: /chat
+            - img [ref=e120]
+            - generic [ref=e122]: Chat
+        - generic [ref=e123]:
+          - button "Control" [expanded] [ref=e124] [cursor=pointer]:
+            - generic [ref=e125]: Control
+            - img [ref=e127]
+          - generic [ref=e129]:
+            - link "Overview" [ref=e130] [cursor=pointer]:
+              - /url: /overview
+              - img [ref=e132]
+              - generic [ref=e133]: Overview
+            - link "Channels" [ref=e134] [cursor=pointer]:
+              - /url: /channels
+              - img [ref=e136]
+              - generic [ref=e139]: Channels
+            - link "Instances" [ref=e140] [cursor=pointer]:
+              - /url: /instances
+              - img [ref=e142]
+              - generic [ref=e145]: Instances
+            - link "Sessions" [ref=e146] [cursor=pointer]:
+              - /url: /sessions
+              - img [ref=e148]
+              - generic [ref=e151]: Sessions
+            - link "Usage" [ref=e152] [cursor=pointer]:
+              - /url: /usage
+              - img [ref=e154]
+              - generic [ref=e155]: Usage
+            - link "Cron Jobs" [ref=e156] [cursor=pointer]:
+              - /url: /cron
+              - img [ref=e158]
+              - generic [ref=e163]: Cron Jobs
+        - generic [ref=e164]:
+          - button "Agent" [expanded] [ref=e165] [cursor=pointer]:
+            - generic [ref=e166]: Agent
+            - img [ref=e168]
+          - generic [ref=e170]:
+            - link "Agents" [ref=e171] [cursor=pointer]:
+              - /url: /agents
+              - img [ref=e173]
+              - generic [ref=e175]: Agents
+            - link "Skills" [ref=e176] [cursor=pointer]:
+              - /url: /skills
+              - img [ref=e178]
+              - generic [ref=e180]: Skills
+            - link "Nodes" [ref=e181] [cursor=pointer]:
+              - /url: /nodes
+              - img [ref=e183]
+              - generic [ref=e185]: Nodes
+        - generic [ref=e186]:
+          - button "Settings" [expanded] [ref=e187] [cursor=pointer]:
+            - generic [ref=e188]: Settings
+            - img [ref=e190]
+          - generic [ref=e192]:
+            - link "Config" [ref=e193] [cursor=pointer]:
+              - /url: /config
+              - img [ref=e195]
+              - generic [ref=e198]: Config
+            - link "Communications" [ref=e199] [cursor=pointer]:
+              - /url: /communications
+              - img [ref=e201]
+              - generic [ref=e204]: Communications
+            - link "Appearance" [ref=e205] [cursor=pointer]:
+              - /url: /appearance
+              - img [ref=e207]
+              - generic [ref=e209]: Appearance
+            - link "Automation" [ref=e210] [cursor=pointer]:
+              - /url: /automation
+              - img [ref=e212]
+              - generic [ref=e214]: Automation
+            - link "Infrastructure" [ref=e215] [cursor=pointer]:
+              - /url: /infrastructure
+              - img [ref=e217]
+              - generic [ref=e220]: Infrastructure
+            - link "AI & Agents" [ref=e221] [cursor=pointer]:
+              - /url: /ai-agents
+              - img [ref=e223]
+              - generic [ref=e233]: AI & Agents
+            - link "Debug" [ref=e234] [cursor=pointer]:
+              - /url: /debug
+              - img [ref=e236]
+              - generic [ref=e245]: Debug
+            - link "Logs" [ref=e246] [cursor=pointer]:
+              - /url: /logs
+              - img [ref=e248]
+              - generic [ref=e251]: Logs
+      - generic [ref=e253]:
+        - link "Docs" [ref=e254] [cursor=pointer]:
+          - /url: https://docs.openclaw.ai
+          - img [ref=e256]
+          - generic [ref=e258]: Docs
+          - img [ref=e260]
+        - generic "v2026.4.1" [ref=e263]:
+          - generic [ref=e264]: Version
+          - generic [ref=e265]: v2026.4.1
+          - 'img "Gateway status: Online" [ref=e266]'
+  - main [ref=e267]:
+    - generic [ref=e268]:
+      - generic [ref=e270]:
+        - combobox [ref=e272] [cursor=pointer]:
+          - option "main" [selected]
+          - option "final_check_v3"
+          - option "aggresive_final"
+          - option "aggressive_final"
+          - option "aggressive_v1"
+          - option "final_check_v1"
+          - option "new"
+        - combobox "Chat model" [ref=e274] [cursor=pointer]:
+          - option "Default (gpt-4o-mini · openai)"
+          - option "anthropic.claude-3-haiku-20240307-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-3-5-haiku-20241022-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-haiku-4-5-20251001-v1:0 · amazon-bedrock"
+          - option "eu.anthropic.claude-haiku-4-5-20251001-v1:0 · amazon-bedrock"
+          - option "global.anthropic.claude-haiku-4-5-20251001-v1:0 · amazon-bedrock"
+          - option "us.anthropic.claude-haiku-4-5-20251001-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-opus-4-20250514-v1:0 · amazon-bedrock"
+          - option "us.anthropic.claude-opus-4-20250514-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-opus-4-1-20250805-v1:0 · amazon-bedrock"
+          - option "us.anthropic.claude-opus-4-1-20250805-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-opus-4-5-20251101-v1:0 · amazon-bedrock"
+          - option "eu.anthropic.claude-opus-4-5-20251101-v1:0 · amazon-bedrock"
+          - option "global.anthropic.claude-opus-4-5-20251101-v1:0 · amazon-bedrock"
+          - option "us.anthropic.claude-opus-4-5-20251101-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-opus-4-6-v1 · amazon-bedrock"
+          - option "eu.anthropic.claude-opus-4-6-v1 · amazon-bedrock"
+          - option "global.anthropic.claude-opus-4-6-v1 · amazon-bedrock"
+          - option "us.anthropic.claude-opus-4-6-v1 · amazon-bedrock"
+          - option "anthropic.claude-3-5-sonnet-20240620-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-3-5-sonnet-20241022-v2:0 · amazon-bedrock"
+          - option "anthropic.claude-3-7-sonnet-20250219-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-sonnet-4-20250514-v1:0 · amazon-bedrock"
+          - option "eu.anthropic.claude-sonnet-4-20250514-v1:0 · amazon-bedrock"
+          - option "global.anthropic.claude-sonnet-4-20250514-v1:0 · amazon-bedrock"
+          - option "us.anthropic.claude-sonnet-4-20250514-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-sonnet-4-5-20250929-v1:0 · amazon-bedrock"
+          - option "eu.anthropic.claude-sonnet-4-5-20250929-v1:0 · amazon-bedrock"
+          - option "global.anthropic.claude-sonnet-4-5-20250929-v1:0 · amazon-bedrock"
+          - option "us.anthropic.claude-sonnet-4-5-20250929-v1:0 · amazon-bedrock"
+          - option "anthropic.claude-sonnet-4-6 · amazon-bedrock"
+          - option "eu.anthropic.claude-sonnet-4-6 · amazon-bedrock"
+          - option "global.anthropic.claude-sonnet-4-6 · amazon-bedrock"
+          - option "us.anthropic.claude-sonnet-4-6 · amazon-bedrock"
+          - option "deepseek.r1-v1:0 · amazon-bedrock"
+          - option "deepseek.v3-v1:0 · amazon-bedrock"
+          - option "deepseek.v3.2 · amazon-bedrock"
+          - option "mistral.devstral-2-123b · amazon-bedrock"
+          - option "google.gemma-3-4b-it · amazon-bedrock"
+          - option "zai.glm-4.7 · amazon-bedrock"
+          - option "zai.glm-4.7-flash · amazon-bedrock"
+          - option "zai.glm-5 · amazon-bedrock"
+          - option "google.gemma-3-27b-it · amazon-bedrock"
+          - option "openai.gpt-oss-safeguard-120b · amazon-bedrock"
+          - option "openai.gpt-oss-safeguard-20b · amazon-bedrock"
+          - option "openai.gpt-oss-120b-1:0 · amazon-bedrock"
+          - option "openai.gpt-oss-20b-1:0 · amazon-bedrock"
+          - option "moonshot.kimi-k2-thinking · amazon-bedrock"
+          - option "moonshotai.kimi-k2.5 · amazon-bedrock"
+          - option "meta.llama3-1-405b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-1-70b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-1-8b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-2-11b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-2-1b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-2-3b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-2-90b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama3-3-70b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama4-maverick-17b-instruct-v1:0 · amazon-bedrock"
+          - option "meta.llama4-scout-17b-instruct-v1:0 · amazon-bedrock"
+          - option "mistral.magistral-small-2509 · amazon-bedrock"
+          - option "minimax.minimax-m2 · amazon-bedrock"
+          - option "minimax.minimax-m2.1 · amazon-bedrock"
+          - option "minimax.minimax-m2.5 · amazon-bedrock"
+          - option "mistral.ministral-3-14b-instruct · amazon-bedrock"
+          - option "mistral.ministral-3-3b-instruct · amazon-bedrock"
+          - option "mistral.ministral-3-8b-instruct · amazon-bedrock"
+          - option "mistral.mistral-large-3-675b-instruct · amazon-bedrock"
+          - option "amazon.nova-2-lite-v1:0 · amazon-bedrock"
+          - option "amazon.nova-lite-v1:0 · amazon-bedrock"
+          - option "amazon.nova-micro-v1:0 · amazon-bedrock"
+          - option "amazon.nova-premier-v1:0 · amazon-bedrock"
+          - option "amazon.nova-pro-v1:0 · amazon-bedrock"
+          - option "nvidia.nemotron-super-3-120b · amazon-bedrock"
+          - option "nvidia.nemotron-nano-12b-v2 · amazon-bedrock"
+          - option "nvidia.nemotron-nano-3-30b · amazon-bedrock"
+          - option "nvidia.nemotron-nano-9b-v2 · amazon-bedrock"
+          - option "writer.palmyra-x4-v1:0 · amazon-bedrock"
+          - option "writer.palmyra-x5-v1:0 · amazon-bedrock"
+          - option "mistral.pixtral-large-2502-v1:0 · amazon-bedrock"
+          - option "qwen.qwen3-next-80b-a3b · amazon-bedrock"
+          - option "qwen.qwen3-vl-235b-a22b · amazon-bedrock"
+          - option "qwen.qwen3-235b-a22b-2507-v1:0 · amazon-bedrock"
+          - option "qwen.qwen3-32b-v1:0 · amazon-bedrock"
+          - option "qwen.qwen3-coder-30b-a3b-v1:0 · amazon-bedrock"
+          - option "qwen.qwen3-coder-480b-a35b-v1:0 · amazon-bedrock"
+          - option "mistral.voxtral-mini-3b-2507 · amazon-bedrock"
+          - option "mistral.voxtral-small-24b-2507 · amazon-bedrock"
+          - option "claude-3-haiku-20240307 · anthropic"
+          - option "claude-3-5-haiku-20241022 · anthropic"
+          - option "claude-3-5-haiku-latest · anthropic"
+          - option "claude-haiku-4-5-20251001 · anthropic"
+          - option "claude-haiku-4-5 · anthropic"
+          - option "claude-3-opus-20240229 · anthropic"
+          - option "claude-opus-4-20250514 · anthropic"
+          - option "claude-opus-4-0 · anthropic"
+          - option "claude-opus-4-1-20250805 · anthropic"
+          - option "claude-opus-4-1 · anthropic"
+          - option "claude-opus-4-5-20251101 · anthropic"
+          - option "claude-opus-4-5 · anthropic"
+          - option "claude-opus-4-6 · anthropic"
+          - option "claude-3-sonnet-20240229 · anthropic"
+          - option "claude-3-5-sonnet-20240620 · anthropic"
+          - option "claude-3-5-sonnet-20241022 · anthropic"
+          - option "claude-3-7-sonnet-20250219 · anthropic"
+          - option "claude-3-7-sonnet-latest · anthropic"
+          - option "claude-sonnet-4-20250514 · anthropic"
+          - option "claude-sonnet-4-0 · anthropic"
+          - option "claude-sonnet-4-5-20250929 · anthropic"
+          - option "claude-sonnet-4-5 · anthropic"
+          - option "claude-sonnet-4-6 · anthropic"
+          - option "codex-mini-latest · azure-openai-responses"
+          - option "gpt-4 · azure-openai-responses"
+          - option "gpt-4-turbo · azure-openai-responses"
+          - option "gpt-4.1 · azure-openai-responses"
+          - option "gpt-4.1-mini · azure-openai-responses"
+          - option "gpt-4.1-nano · azure-openai-responses"
+          - option "gpt-4o · azure-openai-responses"
+          - option "gpt-4o-2024-05-13 · azure-openai-responses"
+          - option "gpt-4o-2024-08-06 · azure-openai-responses"
+          - option "gpt-4o-2024-11-20 · azure-openai-responses"
+          - option "gpt-4o-mini · azure-openai-responses"
+          - option "gpt-5 · azure-openai-responses"
+          - option "gpt-5-chat-latest · azure-openai-responses"
+          - option "gpt-5-mini · azure-openai-responses"
+          - option "gpt-5-nano · azure-openai-responses"
+          - option "gpt-5-pro · azure-openai-responses"
+          - option "gpt-5-codex · azure-openai-responses"
+          - option "gpt-5.1 · azure-openai-responses"
+          - option "gpt-5.1-chat-latest · azure-openai-responses"
+          - option "gpt-5.1-codex · azure-openai-responses"
+          - option "gpt-5.1-codex-max · azure-openai-responses"
+          - option "gpt-5.1-codex-mini · azure-openai-responses"
+          - option "gpt-5.2 · azure-openai-responses"
+          - option "gpt-5.2-chat-latest · azure-openai-responses"
+          - option "gpt-5.2-codex · azure-openai-responses"
+          - option "gpt-5.2-pro · azure-openai-responses"
+          - option "gpt-5.3-codex · azure-openai-responses"
+          - option "gpt-5.4 · azure-openai-responses"
+          - option "gpt-5.4-mini · azure-openai-responses"
+          - option "gpt-5.4-nano · azure-openai-responses"
+          - option "gpt-5.4-pro · azure-openai-responses"
+          - option "o1 · azure-openai-responses"
+          - option "o1-pro · azure-openai-responses"
+          - option "o3 · azure-openai-responses"
+          - option "o3-deep-research · azure-openai-responses"
+          - option "o3-mini · azure-openai-responses"
+          - option "o3-pro · azure-openai-responses"
+          - option "o4-mini · azure-openai-responses"
+          - option "o4-mini-deep-research · azure-openai-responses"
+          - option "gpt-oss-120b · cerebras"
+          - option "llama3.1-8b · cerebras"
+          - option "qwen-3-235b-a22b-instruct-2507 · cerebras"
+          - option "zai-glm-4.7 · cerebras"
+          - option "claude-haiku-4.5 · github-copilot"
+          - option "claude-opus-4.5 · github-copilot"
+          - option "claude-opus-4.6 · github-copilot"
+          - option "claude-sonnet-4 · github-copilot"
+          - option "claude-sonnet-4.5 · github-copilot"
+          - option "claude-sonnet-4.6 · github-copilot"
+          - option "gemini-2.5-pro · github-copilot"
+          - option "gemini-3-flash-preview · github-copilot"
+          - option "gemini-3-pro-preview · github-copilot"
+          - option "gemini-3.1-pro-preview · github-copilot"
+          - option "gpt-4.1 · github-copilot"
+          - option "gpt-4o · github-copilot"
+          - option "gpt-5 · github-copilot"
+          - option "gpt-5-mini · github-copilot"
+          - option "gpt-5.1 · github-copilot"
+          - option "gpt-5.1-codex · github-copilot"
+          - option "gpt-5.1-codex-max · github-copilot"
+          - option "gpt-5.1-codex-mini · github-copilot"
+          - option "gpt-5.2 · github-copilot"
+          - option "gpt-5.2-codex · github-copilot"
+          - option "gpt-5.3-codex · github-copilot"
+          - option "gpt-5.4 · github-copilot"
+          - option "gpt-5.4-mini · github-copilot"
+          - option "grok-code-fast-1 · github-copilot"
+          - option "gemini-1.5-flash · google"
+          - option "gemini-1.5-flash-8b · google"
+          - option "gemini-1.5-pro · google"
+          - option "gemini-2.0-flash · google"
+          - option "gemini-2.0-flash-lite · google"
+          - option "gemini-2.5-flash · google"
+          - option "gemini-2.5-flash-lite · google"
+          - option "gemini-2.5-flash-lite-preview-06-17 · google"
+          - option "gemini-2.5-flash-lite-preview-09-2025 · google"
+          - option "gemini-2.5-flash-preview-04-17 · google"
+          - option "gemini-2.5-flash-preview-05-20 · google"
+          - option "gemini-2.5-flash-preview-09-2025 · google"
+          - option "gemini-2.5-pro · google"
+          - option "gemini-2.5-pro-preview-05-06 · google"
+          - option "gemini-2.5-pro-preview-06-05 · google"
+          - option "gemini-3-flash-preview · google"
+          - option "gemini-3-pro-preview · google"
+          - option "gemini-3.1-flash-lite-preview · google"
+          - option "gemini-3.1-pro-preview · google"
+          - option "gemini-3.1-pro-preview-customtools · google"
+          - option "gemini-flash-latest · google"
+          - option "gemini-flash-lite-latest · google"
+          - option "gemini-live-2.5-flash · google"
+          - option "gemini-live-2.5-flash-preview-native-audio · google"
+          - option "gemma-3-27b-it · google"
+          - option "claude-opus-4-5-thinking · google-antigravity"
+          - option "claude-opus-4-6-thinking · google-antigravity"
+          - option "claude-sonnet-4-5 · google-antigravity"
+          - option "claude-sonnet-4-5-thinking · google-antigravity"
+          - option "claude-sonnet-4-6 · google-antigravity"
+          - option "gemini-3-flash · google-antigravity"
+          - option "gemini-3.1-pro-high · google-antigravity"
+          - option "gemini-3.1-pro-low · google-antigravity"
+          - option "gpt-oss-120b-medium · google-antigravity"
+          - option "gemini-2.0-flash · google-gemini-cli"
+          - option "gemini-2.5-flash · google-gemini-cli"
+          - option "gemini-2.5-pro · google-gemini-cli"
+          - option "gemini-3-flash-preview · google-gemini-cli"
+          - option "gemini-3-pro-preview · google-gemini-cli"
+          - option "gemini-3.1-pro-preview · google-gemini-cli"
+          - option "gemini-1.5-flash · google-vertex"
+          - option "gemini-1.5-flash-8b · google-vertex"
+          - option "gemini-1.5-pro · google-vertex"
+          - option "gemini-2.0-flash · google-vertex"
+          - option "gemini-2.0-flash-lite · google-vertex"
+          - option "gemini-2.5-flash · google-vertex"
+          - option "gemini-2.5-flash-lite · google-vertex"
+          - option "gemini-2.5-flash-lite-preview-09-2025 · google-vertex"
+          - option "gemini-2.5-pro · google-vertex"
+          - option "gemini-3-flash-preview · google-vertex"
+          - option "gemini-3-pro-preview · google-vertex"
+          - option "gemini-3.1-pro-preview · google-vertex"
+          - option "gemini-3.1-pro-preview-customtools · google-vertex"
+          - option "groq/compound · groq"
+          - option "groq/compound-mini · groq"
+          - option "deepseek-r1-distill-llama-70b · groq"
+          - option "gemma2-9b-it · groq"
+          - option "openai/gpt-oss-120b · groq"
+          - option "openai/gpt-oss-20b · groq"
+          - option "moonshotai/kimi-k2-instruct · groq"
+          - option "moonshotai/kimi-k2-instruct-0905 · groq"
+          - option "llama3-70b-8192 · groq"
+          - option "llama3-8b-8192 · groq"
+          - option "llama-3.1-8b-instant · groq"
+          - option "llama-3.3-70b-versatile · groq"
+          - option "meta-llama/llama-4-maverick-17b-128e-instruct · groq"
+          - option "meta-llama/llama-4-scout-17b-16e-instruct · groq"
+          - option "mistral-saba-24b · groq"
+          - option "qwen-qwq-32b · groq"
+          - option "qwen/qwen3-32b · groq"
+          - option "openai/gpt-oss-safeguard-20b · groq"
+          - option "deepseek-ai/DeepSeek-R1-0528 · huggingface"
+          - option "deepseek-ai/DeepSeek-V3.2 · huggingface"
+          - option "zai-org/GLM-4.7 · huggingface"
+          - option "zai-org/GLM-4.7-Flash · huggingface"
+          - option "zai-org/GLM-5 · huggingface"
+          - option "moonshotai/Kimi-K2-Instruct · huggingface"
+          - option "moonshotai/Kimi-K2-Instruct-0905 · huggingface"
+          - option "moonshotai/Kimi-K2-Thinking · huggingface"
+          - option "moonshotai/Kimi-K2.5 · huggingface"
+          - option "XiaomiMiMo/MiMo-V2-Flash · huggingface"
+          - option "MiniMaxAI/MiniMax-M2.1 · huggingface"
+          - option "MiniMaxAI/MiniMax-M2.5 · huggingface"
+          - option "Qwen/Qwen3-235B-A22B-Thinking-2507 · huggingface"
+          - option "Qwen/Qwen3-Coder-480B-A35B-Instruct · huggingface"
+          - option "Qwen/Qwen3-Coder-Next · huggingface"
+          - option "Qwen/Qwen3-Next-80B-A3B-Instruct · huggingface"
+          - option "Qwen/Qwen3-Next-80B-A3B-Thinking · huggingface"
+          - option "Qwen/Qwen3.5-397B-A17B · huggingface"
+          - option "kimi-k2-thinking · kimi-coding"
+          - option "k2p5 · kimi-coding"
+          - option "MiniMax-M2.7 · minimax"
+          - option "MiniMax-M2.7-highspeed · minimax"
+          - option "MiniMax-M2.7 · minimax-cn"
+          - option "MiniMax-M2.7-highspeed · minimax-cn"
+          - option "codestral-latest · mistral"
+          - option "devstral-2512 · mistral"
+          - option "devstral-medium-latest · mistral"
+          - option "devstral-medium-2507 · mistral"
+          - option "devstral-small-2507 · mistral"
+          - option "labs-devstral-small-2512 · mistral"
+          - option "devstral-small-2505 · mistral"
+          - option "magistral-medium-latest · mistral"
+          - option "magistral-small · mistral"
+          - option "ministral-3b-latest · mistral"
+          - option "ministral-8b-latest · mistral"
+          - option "open-mistral-7b · mistral"
+          - option "mistral-large-latest · mistral"
+          - option "mistral-large-2411 · mistral"
+          - option "mistral-large-2512 · mistral"
+          - option "mistral-medium-latest · mistral"
+          - option "mistral-medium-2505 · mistral"
+          - option "mistral-medium-2508 · mistral"
+          - option "mistral-nemo · mistral"
+          - option "mistral-small-latest · mistral"
+          - option "mistral-small-2506 · mistral"
+          - option "open-mixtral-8x22b · mistral"
+          - option "open-mixtral-8x7b · mistral"
+          - option "pixtral-12b · mistral"
+          - option "pixtral-large-latest · mistral"
+          - option "codex-mini-latest · openai"
+          - option "gpt-4 · openai"
+          - option "gpt-4-turbo · openai"
+          - option "gpt-4.1 · openai"
+          - option "gpt-4.1-mini · openai"
+          - option "gpt-4.1-nano · openai"
+          - option "gpt-4o · openai"
+          - option "gpt-4o-2024-05-13 · openai"
+          - option "gpt-4o-2024-08-06 · openai"
+          - option "gpt-4o-2024-11-20 · openai"
+          - option "gpt-4o-mini · openai" [selected]
+          - option "openai/gpt-4o-mini · openai"
+          - option "gpt-5 · openai"
+          - option "gpt-5-chat-latest · openai"
+          - option "gpt-5-mini · openai"
+          - option "gpt-5-nano · openai"
+          - option "gpt-5-pro · openai"
+          - option "gpt-5-codex · openai"
+          - option "gpt-5.1 · openai"
+          - option "gpt-5.1-chat-latest · openai"
+          - option "gpt-5.1-codex · openai"
+          - option "gpt-5.1-codex-max · openai"
+          - option "gpt-5.1-codex-mini · openai"
+          - option "gpt-5.2 · openai"
+          - option "gpt-5.2-chat-latest · openai"
+          - option "gpt-5.2-codex · openai"
+          - option "gpt-5.2-pro · openai"
+          - option "gpt-5.3-codex · openai"
+          - option "gpt-5.4 · openai"
+          - option "gpt-5.4-mini · openai"
+          - option "gpt-5.4-nano · openai"
+          - option "gpt-5.4-pro · openai"
+          - option "o1 · openai"
+          - option "o1-pro · openai"
+          - option "o3 · openai"
+          - option "o3-deep-research · openai"
+          - option "o3-mini · openai"
+          - option "o3-pro · openai"
+          - option "o4-mini · openai"
+          - option "o4-mini-deep-research · openai"
+          - option "gpt-5.1 · openai-codex"
+          - option "gpt-5.1-codex-max · openai-codex"
+          - option "gpt-5.1-codex-mini · openai-codex"
+          - option "gpt-5.2 · openai-codex"
+          - option "gpt-5.2-codex · openai-codex"
+          - option "gpt-5.3-codex · openai-codex"
+          - option "gpt-5.3-codex-spark · openai-codex"
+          - option "gpt-5.4 · openai-codex"
+          - option "gpt-5.4-mini · openai-codex"
+          - option "big-pickle · opencode"
+          - option "claude-3-5-haiku · opencode"
+          - option "claude-haiku-4-5 · opencode"
+          - option "claude-opus-4-1 · opencode"
+          - option "claude-opus-4-5 · opencode"
+          - option "claude-opus-4-6 · opencode"
+          - option "claude-sonnet-4 · opencode"
+          - option "claude-sonnet-4-5 · opencode"
+          - option "claude-sonnet-4-6 · opencode"
+          - option "gemini-3-flash · opencode"
+          - option "gemini-3.1-pro · opencode"
+          - option "glm-5 · opencode"
+          - option "gpt-5 · opencode"
+          - option "gpt-5-codex · opencode"
+          - option "gpt-5-nano · opencode"
+          - option "gpt-5.1 · opencode"
+          - option "gpt-5.1-codex · opencode"
+          - option "gpt-5.1-codex-max · opencode"
+          - option "gpt-5.1-codex-mini · opencode"
+          - option "gpt-5.2 · opencode"
+          - option "gpt-5.2-codex · opencode"
+          - option "gpt-5.3-codex · opencode"
+          - option "gpt-5.4 · opencode"
+          - option "gpt-5.4-mini · opencode"
+          - option "gpt-5.4-nano · opencode"
+          - option "gpt-5.4-pro · opencode"
+          - option "kimi-k2.5 · opencode"
+          - option "mimo-v2-omni-free · opencode"
+          - option "mimo-v2-pro-free · opencode"
+          - option "minimax-m2.5 · opencode"
+          - option "minimax-m2.5-free · opencode"
+          - option "nemotron-3-super-free · opencode"
+          - option "glm-5 · opencode-go"
+          - option "kimi-k2.5 · opencode-go"
+          - option "minimax-m2.5 · opencode-go"
+          - option "minimax-m2.7 · opencode-go"
+          - option "ai21/jamba-large-1.7 · openrouter"
+          - option "allenai/olmo-3.1-32b-instruct · openrouter"
+          - option "amazon/nova-2-lite-v1 · openrouter"
+          - option "amazon/nova-lite-v1 · openrouter"
+          - option "amazon/nova-micro-v1 · openrouter"
+          - option "amazon/nova-premier-v1 · openrouter"
+          - option "amazon/nova-pro-v1 · openrouter"
+          - option "anthropic/claude-3-haiku · openrouter"
+          - option "anthropic/claude-3.5-haiku · openrouter"
+          - option "anthropic/claude-3.5-sonnet · openrouter"
+          - option "anthropic/claude-3.7-sonnet · openrouter"
+          - option "anthropic/claude-3.7-sonnet:thinking · openrouter"
+          - option "anthropic/claude-haiku-4.5 · openrouter"
+          - option "anthropic/claude-opus-4 · openrouter"
+          - option "anthropic/claude-opus-4.1 · openrouter"
+          - option "anthropic/claude-opus-4.5 · openrouter"
+          - option "anthropic/claude-opus-4.6 · openrouter"
+          - option "anthropic/claude-sonnet-4 · openrouter"
+          - option "anthropic/claude-sonnet-4.5 · openrouter"
+          - option "anthropic/claude-sonnet-4.6 · openrouter"
+          - option "arcee-ai/trinity-large-preview:free · openrouter"
+          - option "arcee-ai/trinity-mini · openrouter"
+          - option "arcee-ai/trinity-mini:free · openrouter"
+          - option "arcee-ai/virtuoso-large · openrouter"
+          - option "openrouter/auto · openrouter"
+          - option "baidu/ernie-4.5-21b-a3b · openrouter"
+          - option "baidu/ernie-4.5-vl-28b-a3b · openrouter"
+          - option "bytedance-seed/seed-1.6 · openrouter"
+          - option "bytedance-seed/seed-1.6-flash · openrouter"
+          - option "bytedance-seed/seed-2.0-lite · openrouter"
+          - option "bytedance-seed/seed-2.0-mini · openrouter"
+          - option "cohere/command-r-08-2024 · openrouter"
+          - option "cohere/command-r-plus-08-2024 · openrouter"
+          - option "deepseek/deepseek-chat · openrouter"
+          - option "deepseek/deepseek-chat-v3-0324 · openrouter"
+          - option "deepseek/deepseek-chat-v3.1 · openrouter"
+          - option "deepseek/deepseek-v3.1-terminus · openrouter"
+          - option "deepseek/deepseek-v3.2 · openrouter"
+          - option "deepseek/deepseek-v3.2-exp · openrouter"
+          - option "deepseek/deepseek-r1 · openrouter"
+          - option "deepseek/deepseek-r1-0528 · openrouter"
+          - option "essentialai/rnj-1-instruct · openrouter"
+          - option "openrouter/free · openrouter"
+          - option "google/gemini-2.0-flash-001 · openrouter"
+          - option "google/gemini-2.0-flash-lite-001 · openrouter"
+          - option "google/gemini-2.5-flash · openrouter"
+          - option "google/gemini-2.5-flash-lite · openrouter"
+          - option "google/gemini-2.5-flash-lite-preview-09-2025 · openrouter"
+          - option "google/gemini-2.5-pro · openrouter"
+          - option "google/gemini-2.5-pro-preview-05-06 · openrouter"
+          - option "google/gemini-2.5-pro-preview · openrouter"
+          - option "google/gemini-3-flash-preview · openrouter"
+          - option "google/gemini-3.1-flash-lite-preview · openrouter"
+          - option "google/gemini-3.1-pro-preview · openrouter"
+          - option "google/gemini-3.1-pro-preview-customtools · openrouter"
+          - option "openrouter/healer-alpha · openrouter"
+          - option "openrouter/hunter-alpha · openrouter"
+          - option "inception/mercury · openrouter"
+          - option "inception/mercury-2 · openrouter"
+          - option "inception/mercury-coder · openrouter"
+          - option "kwaipilot/kat-coder-pro · openrouter"
+          - option "kwaipilot/kat-coder-pro-v2 · openrouter"
+          - option "meituan/longcat-flash-chat · openrouter"
+          - option "meta-llama/llama-3-8b-instruct · openrouter"
+          - option "meta-llama/llama-3.1-70b-instruct · openrouter"
+          - option "meta-llama/llama-3.1-8b-instruct · openrouter"
+          - option "meta-llama/llama-3.3-70b-instruct · openrouter"
+          - option "meta-llama/llama-3.3-70b-instruct:free · openrouter"
+          - option "meta-llama/llama-4-maverick · openrouter"
+          - option "meta-llama/llama-4-scout · openrouter"
+          - option "minimax/minimax-m1 · openrouter"
+          - option "minimax/minimax-m2 · openrouter"
+          - option "minimax/minimax-m2.1 · openrouter"
+          - option "minimax/minimax-m2.5 · openrouter"
+          - option "minimax/minimax-m2.5:free · openrouter"
+          - option "minimax/minimax-m2.7 · openrouter"
+          - option "mistralai/mistral-large · openrouter"
+          - option "mistralai/mistral-large-2407 · openrouter"
+          - option "mistralai/mistral-large-2411 · openrouter"
+          - option "mistralai/codestral-2508 · openrouter"
+          - option "mistralai/devstral-2512 · openrouter"
+          - option "mistralai/devstral-medium · openrouter"
+          - option "mistralai/devstral-small · openrouter"
+          - option "mistralai/ministral-14b-2512 · openrouter"
+          - option "mistralai/ministral-3b-2512 · openrouter"
+          - option "mistralai/ministral-8b-2512 · openrouter"
+          - option "mistralai/mistral-large-2512 · openrouter"
+          - option "mistralai/mistral-medium-3 · openrouter"
+          - option "mistralai/mistral-medium-3.1 · openrouter"
+          - option "mistralai/mistral-nemo · openrouter"
+          - option "mistralai/mistral-small-24b-instruct-2501 · openrouter"
+          - option "mistralai/mistral-small-3.2-24b-instruct · openrouter"
+          - option "mistralai/mistral-small-2603 · openrouter"
+          - option "mistralai/mistral-small-creative · openrouter"
+          - option "mistralai/mixtral-8x22b-instruct · openrouter"
+          - option "mistralai/mixtral-8x7b-instruct · openrouter"
+          - option "mistralai/pixtral-large-2411 · openrouter"
+          - option "mistralai/mistral-saba · openrouter"
+          - option "mistralai/voxtral-small-24b-2507 · openrouter"
+          - option "moonshotai/kimi-k2 · openrouter"
+          - option "moonshotai/kimi-k2-0905 · openrouter"
+          - option "moonshotai/kimi-k2-thinking · openrouter"
+          - option "moonshotai/kimi-k2.5 · openrouter"
+          - option "nex-agi/deepseek-v3.1-nex-n1 · openrouter"
+          - option "nvidia/llama-3.1-nemotron-70b-instruct · openrouter"
+          - option "nvidia/llama-3.3-nemotron-super-49b-v1.5 · openrouter"
+          - option "nvidia/nemotron-3-nano-30b-a3b · openrouter"
+          - option "nvidia/nemotron-3-nano-30b-a3b:free · openrouter"
+          - option "nvidia/nemotron-3-super-120b-a12b · openrouter"
+          - option "nvidia/nemotron-3-super-120b-a12b:free · openrouter"
+          - option "nvidia/nemotron-nano-12b-v2-vl:free · openrouter"
+          - option "nvidia/nemotron-nano-9b-v2 · openrouter"
+          - option "nvidia/nemotron-nano-9b-v2:free · openrouter"
+          - option "openai/gpt-3.5-turbo · openrouter"
+          - option "openai/gpt-3.5-turbo-0613 · openrouter"
+          - option "openai/gpt-3.5-turbo-16k · openrouter"
+          - option "openai/gpt-4 · openrouter"
+          - option "openai/gpt-4-0314 · openrouter"
+          - option "openai/gpt-4-turbo · openrouter"
+          - option "openai/gpt-4-1106-preview · openrouter"
+          - option "openai/gpt-4-turbo-preview · openrouter"
+          - option "openai/gpt-4.1 · openrouter"
+          - option "openai/gpt-4.1-mini · openrouter"
+          - option "openai/gpt-4.1-nano · openrouter"
+          - option "openai/gpt-4o · openrouter"
+          - option "openai/gpt-4o-2024-05-13 · openrouter"
+          - option "openai/gpt-4o-2024-08-06 · openrouter"
+          - option "openai/gpt-4o-2024-11-20 · openrouter"
+          - option "openai/gpt-4o:extended · openrouter"
+          - option "openai/gpt-4o-audio-preview · openrouter"
+          - option "openai/gpt-4o-mini · openrouter"
+          - option "openai/gpt-4o-mini-2024-07-18 · openrouter"
+          - option "openai/gpt-5 · openrouter"
+          - option "openai/gpt-5-codex · openrouter"
+          - option "openai/gpt-5-image · openrouter"
+          - option "openai/gpt-5-image-mini · openrouter"
+          - option "openai/gpt-5-mini · openrouter"
+          - option "openai/gpt-5-nano · openrouter"
+          - option "openai/gpt-5-pro · openrouter"
+          - option "openai/gpt-5.1 · openrouter"
+          - option "openai/gpt-5.1-chat · openrouter"
+          - option "openai/gpt-5.1-codex · openrouter"
+          - option "openai/gpt-5.1-codex-max · openrouter"
+          - option "openai/gpt-5.1-codex-mini · openrouter"
+          - option "openai/gpt-5.2 · openrouter"
+          - option "openai/gpt-5.2-chat · openrouter"
+          - option "openai/gpt-5.2-pro · openrouter"
+          - option "openai/gpt-5.2-codex · openrouter"
+          - option "openai/gpt-5.3-chat · openrouter"
+          - option "openai/gpt-5.3-codex · openrouter"
+          - option "openai/gpt-5.4 · openrouter"
+          - option "openai/gpt-5.4-mini · openrouter"
+          - option "openai/gpt-5.4-nano · openrouter"
+          - option "openai/gpt-5.4-pro · openrouter"
+          - option "openai/gpt-oss-120b · openrouter"
+          - option "openai/gpt-oss-120b:free · openrouter"
+          - option "openai/gpt-oss-20b · openrouter"
+          - option "openai/gpt-oss-20b:free · openrouter"
+          - option "openai/gpt-oss-safeguard-20b · openrouter"
+          - option "openai/o1 · openrouter"
+          - option "openai/o3 · openrouter"
+          - option "openai/o3-deep-research · openrouter"
+          - option "openai/o3-mini · openrouter"
+          - option "openai/o3-mini-high · openrouter"
+          - option "openai/o3-pro · openrouter"
+          - option "openai/o4-mini · openrouter"
+          - option "openai/o4-mini-deep-research · openrouter"
+          - option "openai/o4-mini-high · openrouter"
+          - option "auto · openrouter"
+          - option "prime-intellect/intellect-3 · openrouter"
+          - option "qwen/qwen-plus-2025-07-28 · openrouter"
+          - option "qwen/qwen-plus-2025-07-28:thinking · openrouter"
+          - option "qwen/qwen-vl-max · openrouter"
+          - option "qwen/qwen-max · openrouter"
+          - option "qwen/qwen-plus · openrouter"
+          - option "qwen/qwen-turbo · openrouter"
+          - option "qwen/qwen-2.5-7b-instruct · openrouter"
+          - option "qwen/qwen3-14b · openrouter"
+          - option "qwen/qwen3-235b-a22b · openrouter"
+          - option "qwen/qwen3-235b-a22b-2507 · openrouter"
+          - option "qwen/qwen3-235b-a22b-thinking-2507 · openrouter"
+          - option "qwen/qwen3-30b-a3b · openrouter"
+          - option "qwen/qwen3-30b-a3b-instruct-2507 · openrouter"
+          - option "qwen/qwen3-30b-a3b-thinking-2507 · openrouter"
+          - option "qwen/qwen3-32b · openrouter"
+          - option "qwen/qwen3-8b · openrouter"
+          - option "qwen/qwen3-coder-30b-a3b-instruct · openrouter"
+          - option "qwen/qwen3-coder · openrouter"
+          - option "qwen/qwen3-coder:free · openrouter"
+          - option "qwen/qwen3-coder-flash · openrouter"
+          - option "qwen/qwen3-coder-next · openrouter"
+          - option "qwen/qwen3-coder-plus · openrouter"
+          - option "qwen/qwen3-max · openrouter"
+          - option "qwen/qwen3-max-thinking · openrouter"
+          - option "qwen/qwen3-next-80b-a3b-instruct · openrouter"
+          - option "qwen/qwen3-next-80b-a3b-instruct:free · openrouter"
+          - option "qwen/qwen3-next-80b-a3b-thinking · openrouter"
+          - option "qwen/qwen3-vl-235b-a22b-instruct · openrouter"
+          - option "qwen/qwen3-vl-235b-a22b-thinking · openrouter"
+          - option "qwen/qwen3-vl-30b-a3b-instruct · openrouter"
+          - option "qwen/qwen3-vl-30b-a3b-thinking · openrouter"
+          - option "qwen/qwen3-vl-32b-instruct · openrouter"
+          - option "qwen/qwen3-vl-8b-instruct · openrouter"
+          - option "qwen/qwen3-vl-8b-thinking · openrouter"
+          - option "qwen/qwen3.5-397b-a17b · openrouter"
+          - option "qwen/qwen3.5-plus-02-15 · openrouter"
+          - option "qwen/qwen3.5-122b-a10b · openrouter"
+          - option "qwen/qwen3.5-27b · openrouter"
+          - option "qwen/qwen3.5-35b-a3b · openrouter"
+          - option "qwen/qwen3.5-9b · openrouter"
+          - option "qwen/qwen3.5-flash-02-23 · openrouter"
+          - option "qwen/qwq-32b · openrouter"
+          - option "qwen/qwen-2.5-72b-instruct · openrouter"
+          - option "reka/reka-edge · openrouter"
+          - option "relace/relace-search · openrouter"
+          - option "sao10k/l3-euryale-70b · openrouter"
+          - option "sao10k/l3.1-euryale-70b · openrouter"
+          - option "stepfun/step-3.5-flash · openrouter"
+          - option "stepfun/step-3.5-flash:free · openrouter"
+          - option "thedrummer/rocinante-12b · openrouter"
+          - option "thedrummer/unslopnemo-12b · openrouter"
+          - option "tngtech/deepseek-r1t2-chimera · openrouter"
+          - option "alibaba/tongyi-deepresearch-30b-a3b · openrouter"
+          - option "upstage/solar-pro-3 · openrouter"
+          - option "x-ai/grok-3 · openrouter"
+          - option "x-ai/grok-3-beta · openrouter"
+          - option "x-ai/grok-3-mini · openrouter"
+          - option "x-ai/grok-3-mini-beta · openrouter"
+          - option "x-ai/grok-4 · openrouter"
+          - option "x-ai/grok-4-fast · openrouter"
+          - option "x-ai/grok-4.1-fast · openrouter"
+          - option "x-ai/grok-4.20-beta · openrouter"
+          - option "x-ai/grok-code-fast-1 · openrouter"
+          - option "xiaomi/mimo-v2-flash · openrouter"
+          - option "xiaomi/mimo-v2-omni · openrouter"
+          - option "xiaomi/mimo-v2-pro · openrouter"
+          - option "z-ai/glm-4-32b · openrouter"
+          - option "z-ai/glm-4.5 · openrouter"
+          - option "z-ai/glm-4.5-air · openrouter"
+          - option "z-ai/glm-4.5-air:free · openrouter"
+          - option "z-ai/glm-4.5v · openrouter"
+          - option "z-ai/glm-4.6 · openrouter"
+          - option "z-ai/glm-4.6v · openrouter"
+          - option "z-ai/glm-4.7 · openrouter"
+          - option "z-ai/glm-4.7-flash · openrouter"
+          - option "z-ai/glm-5 · openrouter"
+          - option "z-ai/glm-5-turbo · openrouter"
+          - option "anthropic/claude-3-haiku · vercel-ai-gateway"
+          - option "anthropic/claude-3.5-haiku · vercel-ai-gateway"
+          - option "anthropic/claude-3.5-sonnet · vercel-ai-gateway"
+          - option "anthropic/claude-3.5-sonnet-20240620 · vercel-ai-gateway"
+          - option "anthropic/claude-3.7-sonnet · vercel-ai-gateway"
+          - option "anthropic/claude-haiku-4.5 · vercel-ai-gateway"
+          - option "anthropic/claude-opus-4 · vercel-ai-gateway"
+          - option "anthropic/claude-opus-4.1 · vercel-ai-gateway"
+          - option "anthropic/claude-opus-4.5 · vercel-ai-gateway"
+          - option "anthropic/claude-opus-4.6 · vercel-ai-gateway"
+          - option "anthropic/claude-sonnet-4 · vercel-ai-gateway"
+          - option "anthropic/claude-sonnet-4.5 · vercel-ai-gateway"
+          - option "anthropic/claude-sonnet-4.6 · vercel-ai-gateway"
+          - option "cohere/command-a · vercel-ai-gateway"
+          - option "deepseek/deepseek-v3 · vercel-ai-gateway"
+          - option "deepseek/deepseek-v3.1-terminus · vercel-ai-gateway"
+          - option "deepseek/deepseek-v3.2 · vercel-ai-gateway"
+          - option "deepseek/deepseek-v3.2-thinking · vercel-ai-gateway"
+          - option "deepseek/deepseek-r1 · vercel-ai-gateway"
+          - option "deepseek/deepseek-v3.1 · vercel-ai-gateway"
+          - option "mistral/devstral-2 · vercel-ai-gateway"
+          - option "mistral/devstral-small · vercel-ai-gateway"
+          - option "mistral/devstral-small-2 · vercel-ai-gateway"
+          - option "google/gemini-2.0-flash · vercel-ai-gateway"
+          - option "google/gemini-2.0-flash-lite · vercel-ai-gateway"
+          - option "google/gemini-2.5-flash · vercel-ai-gateway"
+          - option "google/gemini-2.5-flash-lite · vercel-ai-gateway"
+          - option "google/gemini-2.5-pro · vercel-ai-gateway"
+          - option "google/gemini-3-flash · vercel-ai-gateway"
+          - option "google/gemini-3-pro-preview · vercel-ai-gateway"
+          - option "google/gemini-3.1-flash-lite-preview · vercel-ai-gateway"
+          - option "google/gemini-3.1-pro-preview · vercel-ai-gateway"
+          - option "zai/glm-4.5-air · vercel-ai-gateway"
+          - option "zai/glm-4.5v · vercel-ai-gateway"
+          - option "zai/glm-4.6 · vercel-ai-gateway"
+          - option "zai/glm-4.7 · vercel-ai-gateway"
+          - option "zai/glm-4.7-flash · vercel-ai-gateway"
+          - option "zai/glm-4.7-flashx · vercel-ai-gateway"
+          - option "zai/glm-5-turbo · vercel-ai-gateway"
+          - option "zai/glm-4.5 · vercel-ai-gateway"
+          - option "zai/glm-4.6v · vercel-ai-gateway"
+          - option "zai/glm-4.6v-flash · vercel-ai-gateway"
+          - option "openai/gpt-5-chat · vercel-ai-gateway"
+          - option "openai/gpt-5.1-codex-max · vercel-ai-gateway"
+          - option "openai/gpt-5.1-codex-mini · vercel-ai-gateway"
+          - option "openai/gpt-5.1-thinking · vercel-ai-gateway"
+          - option "openai/gpt-5.2 · vercel-ai-gateway"
+          - option "openai/gpt-5.2-pro · vercel-ai-gateway"
+          - option "openai/gpt-5.2-chat · vercel-ai-gateway"
+          - option "openai/gpt-5.2-codex · vercel-ai-gateway"
+          - option "openai/gpt-5.3-codex · vercel-ai-gateway"
+          - option "openai/gpt-5.4 · vercel-ai-gateway"
+          - option "openai/gpt-5.4-mini · vercel-ai-gateway"
+          - option "openai/gpt-5.4-nano · vercel-ai-gateway"
+          - option "openai/gpt-5.4-pro · vercel-ai-gateway"
+          - option "openai/gpt-4-turbo · vercel-ai-gateway"
+          - option "openai/gpt-4.1 · vercel-ai-gateway"
+          - option "openai/gpt-4.1-mini · vercel-ai-gateway"
+          - option "openai/gpt-4.1-nano · vercel-ai-gateway"
+          - option "openai/gpt-4o · vercel-ai-gateway"
+          - option "openai/gpt-4o-mini · vercel-ai-gateway"
+          - option "openai/gpt-5 · vercel-ai-gateway"
+          - option "openai/gpt-5-mini · vercel-ai-gateway"
+          - option "openai/gpt-5-nano · vercel-ai-gateway"
+          - option "openai/gpt-5-pro · vercel-ai-gateway"
+          - option "openai/gpt-5-codex · vercel-ai-gateway"
+          - option "openai/gpt-5.1-instant · vercel-ai-gateway"
+          - option "openai/gpt-5.1-codex · vercel-ai-gateway"
+          - option "openai/gpt-5.3-chat · vercel-ai-gateway"
+          - option "openai/gpt-oss-20b · vercel-ai-gateway"
+          - option "openai/gpt-oss-safeguard-20b · vercel-ai-gateway"
+          - option "xai/grok-2-vision · vercel-ai-gateway"
+          - option "xai/grok-3 · vercel-ai-gateway"
+          - option "xai/grok-3-fast · vercel-ai-gateway"
+          - option "xai/grok-3-mini · vercel-ai-gateway"
+          - option "xai/grok-3-mini-fast · vercel-ai-gateway"
+          - option "xai/grok-4 · vercel-ai-gateway"
+          - option "xai/grok-4-fast-non-reasoning · vercel-ai-gateway"
+          - option "xai/grok-4-fast-reasoning · vercel-ai-gateway"
+          - option "xai/grok-4.1-fast-non-reasoning · vercel-ai-gateway"
+          - option "xai/grok-4.1-fast-reasoning · vercel-ai-gateway"
+          - option "xai/grok-4.20-non-reasoning-beta · vercel-ai-gateway"
+          - option "xai/grok-4.20-reasoning-beta · vercel-ai-gateway"
+          - option "xai/grok-4.20-multi-agent-beta · vercel-ai-gateway"
+          - option "xai/grok-4.20-multi-agent · vercel-ai-gateway"
+          - option "xai/grok-4.20-non-reasoning · vercel-ai-gateway"
+          - option "xai/grok-4.20-reasoning · vercel-ai-gateway"
+          - option "xai/grok-code-fast-1 · vercel-ai-gateway"
+          - option "prime-intellect/intellect-3 · vercel-ai-gateway"
+          - option "kwaipilot/kat-coder-pro-v2 · vercel-ai-gateway"
+          - option "moonshotai/kimi-k2 · vercel-ai-gateway"
+          - option "moonshotai/kimi-k2-0905 · vercel-ai-gateway"
+          - option "moonshotai/kimi-k2-thinking · vercel-ai-gateway"
+          - option "moonshotai/kimi-k2-thinking-turbo · vercel-ai-gateway"
+          - option "moonshotai/kimi-k2-turbo · vercel-ai-gateway"
+          - option "moonshotai/kimi-k2.5 · vercel-ai-gateway"
+          - option "meta/llama-3.1-70b · vercel-ai-gateway"
+          - option "meta/llama-3.1-8b · vercel-ai-gateway"
+          - option "meta/llama-3.2-11b · vercel-ai-gateway"
+          - option "meta/llama-3.2-90b · vercel-ai-gateway"
+          - option "meta/llama-3.3-70b · vercel-ai-gateway"
+          - option "meta/llama-4-maverick · vercel-ai-gateway"
+          - option "meta/llama-4-scout · vercel-ai-gateway"
+          - option "meituan/longcat-flash-chat · vercel-ai-gateway"
+          - option "meituan/longcat-flash-thinking · vercel-ai-gateway"
+          - option "inception/mercury-2 · vercel-ai-gateway"
+          - option "inception/mercury-coder-small · vercel-ai-gateway"
+          - option "xiaomi/mimo-v2-flash · vercel-ai-gateway"
+          - option "xiaomi/mimo-v2-pro · vercel-ai-gateway"
+          - option "minimax/minimax-m2 · vercel-ai-gateway"
+          - option "minimax/minimax-m2.1 · vercel-ai-gateway"
+          - option "minimax/minimax-m2.1-lightning · vercel-ai-gateway"
+          - option "minimax/minimax-m2.5 · vercel-ai-gateway"
+          - option "minimax/minimax-m2.5-highspeed · vercel-ai-gateway"
+          - option "minimax/minimax-m2.7 · vercel-ai-gateway"
+          - option "minimax/minimax-m2.7-highspeed · vercel-ai-gateway"
+          - option "mistral/ministral-3b · vercel-ai-gateway"
+          - option "mistral/ministral-8b · vercel-ai-gateway"
+          - option "mistral/codestral · vercel-ai-gateway"
+          - option "mistral/mistral-medium · vercel-ai-gateway"
+          - option "mistral/mistral-small · vercel-ai-gateway"
+          - option "nvidia/nemotron-nano-12b-v2-vl · vercel-ai-gateway"
+          - option "nvidia/nemotron-nano-9b-v2 · vercel-ai-gateway"
+          - option "openai/o1 · vercel-ai-gateway"
+          - option "openai/o3 · vercel-ai-gateway"
+          - option "openai/o3-pro · vercel-ai-gateway"
+          - option "openai/o3-deep-research · vercel-ai-gateway"
+          - option "openai/o3-mini · vercel-ai-gateway"
+          - option "openai/o4-mini · vercel-ai-gateway"
+          - option "mistral/pixtral-12b · vercel-ai-gateway"
+          - option "mistral/pixtral-large · vercel-ai-gateway"
+          - option "alibaba/qwen-3-32b · vercel-ai-gateway"
+          - option "alibaba/qwen3-coder-30b-a3b · vercel-ai-gateway"
+          - option "alibaba/qwen3-max-thinking · vercel-ai-gateway"
+          - option "alibaba/qwen3.5-flash · vercel-ai-gateway"
+          - option "alibaba/qwen3.5-plus · vercel-ai-gateway"
+          - option "alibaba/qwen3-235b-a22b-thinking · vercel-ai-gateway"
+          - option "alibaba/qwen3-coder · vercel-ai-gateway"
+          - option "alibaba/qwen3-coder-next · vercel-ai-gateway"
+          - option "alibaba/qwen3-coder-plus · vercel-ai-gateway"
+          - option "alibaba/qwen3-max · vercel-ai-gateway"
+          - option "alibaba/qwen3-max-preview · vercel-ai-gateway"
+          - option "alibaba/qwen3-vl-thinking · vercel-ai-gateway"
+          - option "alibaba/qwen-3-14b · vercel-ai-gateway"
+          - option "alibaba/qwen-3-235b · vercel-ai-gateway"
+          - option "alibaba/qwen-3-30b · vercel-ai-gateway"
+          - option "bytedance/seed-1.6 · vercel-ai-gateway"
+          - option "perplexity/sonar · vercel-ai-gateway"
+          - option "perplexity/sonar-pro · vercel-ai-gateway"
+          - option "arcee-ai/trinity-large-preview · vercel-ai-gateway"
+          - option "grok-2 · xai"
+          - option "grok-2-1212 · xai"
+          - option "grok-2-latest · xai"
+          - option "grok-2-vision · xai"
+          - option "grok-2-vision-1212 · xai"
+          - option "grok-2-vision-latest · xai"
+          - option "grok-3 · xai"
+          - option "grok-3-fast · xai"
+          - option "grok-3-fast-latest · xai"
+          - option "grok-3-latest · xai"
+          - option "grok-3-mini · xai"
+          - option "grok-3-mini-fast · xai"
+          - option "grok-3-mini-fast-latest · xai"
+          - option "grok-3-mini-latest · xai"
+          - option "grok-4 · xai"
+          - option "grok-4-fast · xai"
+          - option "grok-4-fast-non-reasoning · xai"
+          - option "grok-4-1-fast · xai"
+          - option "grok-4-1-fast-non-reasoning · xai"
+          - option "grok-4.20-0309-non-reasoning · xai"
+          - option "grok-4.20-0309-reasoning · xai"
+          - option "grok-beta · xai"
+          - option "grok-code-fast-1 · xai"
+          - option "grok-vision-beta · xai"
+          - option "glm-4.5 · zai"
+          - option "glm-4.5-air · zai"
+          - option "glm-4.5-flash · zai"
+          - option "glm-4.5v · zai"
+          - option "glm-4.6 · zai"
+          - option "glm-4.6v · zai"
+          - option "glm-4.7 · zai"
+          - option "glm-4.7-flash · zai"
+          - option "glm-4.7-flashx · zai"
+          - option "glm-5 · zai"
+          - option "glm-5-turbo · zai"
+      - generic [ref=e276]:
+        - button "Refresh chat data" [ref=e277] [cursor=pointer]:
+          - img [ref=e278]
+        - generic [ref=e281]: "|"
+        - button "Toggle assistant thinking/working output" [pressed] [ref=e282] [cursor=pointer]:
+          - img [ref=e283]
+        - button "Toggle tool calls and tool results" [pressed] [ref=e293] [cursor=pointer]:
+          - img [ref=e294]
+        - button "Toggle focus mode (hide sidebar + page header)" [ref=e296] [cursor=pointer]:
+          - img [ref=e297]
+        - button "Show cron sessions" [pressed] [ref=e303] [cursor=pointer]:
+          - img [ref=e305]
+    - generic [ref=e308]:
+      - log [ref=e311]:
+        - generic [ref=e312]:
+          - generic [ref=e313]:
+            - img [ref=e315]
+            - generic [ref=e318]:
+              - paragraph [ref=e321]: Hola Martillo, intenta buscar martillos de una en el catalogo.
+              - generic [ref=e322]:
+                - generic [ref=e323]: openclaw-control-ui
+                - generic [ref=e324]: 3:27 PM
+                - generic [ref=e325]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e326]:
+            - img [ref=e328]
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - paragraph [ref=e333]: Voy a buscar martillos en el catálogo usando el script de búsqueda.
+                - group [ref=e334]:
+                  - generic "▸ 1 tool exec" [ref=e335] [cursor=pointer]:
+                    - text: ▸
+                    - img [ref=e337]
+                    - generic [ref=e339]: 1 tool
+                    - generic [ref=e340]: exec
+              - group [ref=e342]:
+                - generic "▸ Tool output exec" [ref=e343] [cursor=pointer]:
+                  - text: ▸
+                  - img [ref=e345]
+                  - generic [ref=e347]: Tool output
+                  - generic [ref=e348]: exec
+                - text: ▸ ▸
+              - generic [ref=e349]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - paragraph [ref=e351]: "Voy a buscar directamente usando curl según las instrucciones de TOOLS.md:"
+                - group [ref=e352]:
+                  - generic "▸ 1 tool exec" [ref=e353] [cursor=pointer]:
+                    - text: ▸
+                    - img [ref=e355]
+                    - generic [ref=e357]: 1 tool
+                    - generic [ref=e358]: exec
+              - group [ref=e360]:
+                - generic "▸ Tool output exec" [ref=e361] [cursor=pointer]:
+                  - text: ▸
+                  - img [ref=e363]
+                  - generic [ref=e365]: Tool output
+                  - generic [ref=e366]: exec
+                - text: ▸ ▸
+              - generic [ref=e367]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - paragraph [ref=e369]: "Parece haber un problema con la conexión al gateway. Déjame verificar el estado del sistema:"
+                - group [ref=e370]:
+                  - generic "▸ 1 tool session_status" [ref=e371] [cursor=pointer]:
+                    - text: ▸
+                    - img [ref=e373]
+                    - generic [ref=e375]: 1 tool
+                    - generic [ref=e376]: session_status
+              - group [ref=e378]:
+                - generic "▸ Tool output session_status" [ref=e379] [cursor=pointer]:
+                  - text: ▸
+                  - img [ref=e381]
+                  - generic [ref=e383]: Tool output
+                  - generic [ref=e384]: session_status
+                - text: ▸
+              - generic [ref=e385]:
+                - generic [ref=e386]: Tool
+                - generic [ref=e387]: 3:27 PM
+                - generic [ref=e389]: gpt-4o-mini
+                - generic [ref=e390]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e391]:
+            - img [ref=e393]
+            - generic [ref=e395]:
+              - generic [ref=e396]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - generic [ref=e397]:
+                  - paragraph [ref=e398]:
+                    - text: ⚠️
+                    - strong [ref=e399]: Problema de conexión
+                  - paragraph [ref=e400]: No puedo acceder al catálogo de productos en este momento. El sistema está experimentando problemas con la puerta de enlace (gateway), lo que impide realizar consultas a la API de Vendure.
+                  - paragraph [ref=e401]: "El error indica un problema de autenticación con el token de gateway. Posibles causas:"
+                  - list [ref=e402]:
+                    - listitem [ref=e403]: El servicio gateway podría estar reiniciándose
+                    - listitem [ref=e404]: Inconsistencia en la configuración de autenticación
+                  - paragraph [ref=e405]:
+                    - strong [ref=e406]: "Acción sugerida:"
+                    - text: Verificar el estado del servicio gateway con
+                    - code [ref=e407]: openclaw gateway status
+                    - text: e intentar un reinicio si es necesario con
+                    - code [ref=e408]: openclaw gateway restart
+                    - text: .
+                  - paragraph [ref=e409]: Mientras tanto, no puedo realizar búsquedas de productos. Por favor, intenta de nuevo en unos minutos o contacta al administrador del sistema para revisar la configuración del gateway.
+              - generic [ref=e410]:
+                - generic [ref=e411]: Martillo
+                - generic [ref=e412]: 3:28 PM
+                - generic [ref=e414]: gpt-4o-mini
+                - button "Read aloud":
+                  - img
+                - generic [ref=e415]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e416]:
+            - img [ref=e418]
+            - generic [ref=e421]:
+              - paragraph [ref=e424]: Hola, ¿cómo estás?
+              - generic [ref=e425]:
+                - generic [ref=e426]: You
+                - generic [ref=e427]: 4:45 PM
+                - generic [ref=e428]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e429]:
+            - img [ref=e431]
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - generic [ref=e435]:
+                  - paragraph [ref=e436]: ¡Hola! Estoy bien, gracias por preguntar. 😊
+                  - paragraph [ref=e437]: "Soy Martillo, tu asesor experto de Ferretería El Hogar en Medellín. Horario de atención: lunes a viernes de 8am a 5pm, sábados de 8am a 2pm."
+                  - paragraph [ref=e438]: ¿En qué puedo ayudarte hoy? ¿Necesitas algún producto, asesoría o información sobre nuestra ferretería?
+                  - paragraph [ref=e439]:
+                    - strong [ref=e440]: "Nota:"
+                    - text: Acabo de tener un pequeño problema técnico al intentar buscar productos en el catálogo (error de conexión con el sistema), pero puedo intentarlo de nuevo si necesitas consultar precios o disponibilidad.
+              - generic [ref=e441]:
+                - generic [ref=e442]: Martillo
+                - generic [ref=e443]: 4:45 PM
+                - generic [ref=e445]: gpt-4o-mini
+                - button "Read aloud":
+                  - img
+                - generic [ref=e446]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e447]:
+            - img [ref=e449]
+            - generic [ref=e452]:
+              - paragraph [ref=e455]: quiero un taladro
+              - generic [ref=e456]:
+                - generic [ref=e457]: openclaw-control-ui
+                - generic [ref=e458]: 4:49 PM
+                - generic [ref=e459]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e460]:
+            - img [ref=e462]
+            - generic [ref=e464]:
+              - generic [ref=e465]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - paragraph [ref=e467]: "Voy a buscar taladros en el catálogo:"
+                - group [ref=e468]:
+                  - generic "▸ 1 tool exec" [ref=e469] [cursor=pointer]:
+                    - text: ▸
+                    - img [ref=e471]
+                    - generic [ref=e473]: 1 tool
+                    - generic [ref=e474]: exec
+              - group [ref=e476]:
+                - generic "▸ Tool output exec" [ref=e477] [cursor=pointer]:
+                  - text: ▸
+                  - img [ref=e479]
+                  - generic [ref=e481]: Tool output
+                  - generic [ref=e482]: exec
+                - text: ▸ ▸
+              - generic [ref=e483]:
+                - generic [ref=e484]: Tool
+                - generic [ref=e485]: 4:49 PM
+                - generic [ref=e487]: gpt-4o-mini
+                - generic [ref=e488]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e489]:
+            - img [ref=e491]
+            - generic [ref=e493]:
+              - generic [ref=e494]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - generic [ref=e510]:
+                  - paragraph [ref=e511]:
+                    - text: ⚠️
+                    - strong [ref=e512]: No puedo buscar productos en este momento
+                  - paragraph [ref=e513]: El sistema sigue con problemas de conexión al gateway. Esto impide que pueda consultar el catálogo de productos para mostrarte los taladros disponibles.
+                  - paragraph [ref=e514]:
+                    - strong [ref=e515]: "Posibles soluciones:"
+                  - list [ref=e516]:
+                    - listitem [ref=e517]:
+                      - text: "Verificar el estado del gateway:"
+                      - code [ref=e518]: openclaw gateway status
+                    - listitem [ref=e519]:
+                      - text: "Reiniciar el gateway:"
+                      - code [ref=e520]: openclaw gateway restart
+                    - listitem [ref=e521]: Esperar unos minutos y reintentar
+                  - paragraph [ref=e522]: ¿Te gustaría que intente de nuevo en unos minutos, o prefieres que te ayude con otra cosa mientras se resuelve el problema técnico?
+              - generic [ref=e523]:
+                - generic [ref=e524]: Martillo
+                - generic [ref=e525]: 4:49 PM
+                - generic [ref=e527]: gpt-4o-mini
+                - button "Read aloud":
+                  - img
+                - generic [ref=e533]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e538]:
+            - img [ref=e540]
+            - generic [ref=e543]:
+              - paragraph [ref=e546]: quiero un taladro
+              - generic [ref=e547]:
+                - generic [ref=e548]: openclaw-control-ui
+                - generic [ref=e549]: 5:10 PM
+                - generic [ref=e550]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e577]:
+            - img [ref=e579]
+            - generic [ref=e582]:
+              - paragraph [ref=e585]: Hola, ¿cómo estás?
+              - generic [ref=e586]:
+                - generic [ref=e587]: You
+                - generic [ref=e588]: 7:14 PM
+                - generic [ref=e589]:
+                  - button "Delete message":
+                    - img
+          - generic [ref=e603]:
+            - img [ref=e605]
+            - generic [ref=e607]:
+              - generic [ref=e608]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - generic [ref=e609]:
+                  - paragraph [ref=e610]: ¡Hola! Estoy muy bien, gracias. 😊
+                  - paragraph [ref=e611]: ¿Cómo estás tú? ¿En qué puedo ayudarte hoy? ¿Necesitas algún producto, asesoría técnica o información sobre nuestra ferretería El Hogar en Medellín?
+                  - paragraph [ref=e612]: "Recuerda que nuestro horario es: lunes a viernes de 8am a 5pm, y sábados de 8am a 2pm."
+              - generic [ref=e623]:
+                - generic:
+                  - button "Open in canvas":
+                    - generic:
+                      - img
+                  - button "Copy as markdown":
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                - paragraph [ref=e625]: "Voy a intentar buscar taladros de nuevo:"
+              - generic [ref=e613]:
+                - generic [ref=e614]: Martillo
+                - generic [ref=e615]: 7:14 PM
+                - button "Read aloud":
+                  - img
+                - generic [ref=e616]:
+                  - button "Delete message":
+                    - img
+      - generic [ref=e551]:
+        - textbox "Message Martillo (Enter to send)" [active] [ref=e552]
+        - generic [ref=e553]:
+          - generic [ref=e554]:
+            - button "Attach file" [ref=e555] [cursor=pointer]:
+              - img [ref=e556]
+            - button "Voice input" [ref=e558] [cursor=pointer]:
+              - img [ref=e559]
+          - generic [ref=e562]:
+            - button "New session" [ref=e617] [cursor=pointer]:
+              - img [ref=e618]
+            - button "Export chat" [ref=e565] [cursor=pointer]:
+              - img [ref=e566]
+            - button "Send message" [ref=e619] [cursor=pointer]:
+              - img [ref=e620]
+  - dialog [ref=e626]:
+    - generic [ref=e627]:
+      - generic [ref=e629]:
+        - generic [ref=e630]: Exec approval needed
+        - generic [ref=e631]: expires in 29m
+      - generic [ref=e632]: "curl -s -X POST http://bot2-vendure:3000/shop-api -H \"Content-Type: application/json\" -d '{\"query\": \"{ search(input: { term: \\\"taladro\\\", take: 10 }) { items { productName priceWithTax { ... on SinglePrice { value } } } } }\"}'"
+      - generic [ref=e633]:
+        - generic [ref=e634]:
+          - generic [ref=e635]: Host
+          - generic [ref=e636]: gateway
+        - generic [ref=e637]:
+          - generic [ref=e638]: Agent
+          - generic [ref=e639]: main
+        - generic [ref=e640]:
+          - generic [ref=e641]: Session
+          - generic [ref=e642]: agent:main:main
+        - generic [ref=e643]:
+          - generic [ref=e644]: CWD
+          - generic [ref=e645]: /home/node/.openclaw/workspace
+        - generic [ref=e646]:
+          - generic [ref=e647]: Resolved
+          - generic [ref=e648]: /usr/bin/curl
+        - generic [ref=e649]:
+          - generic [ref=e650]: Security
+          - generic [ref=e651]: allowlist
+        - generic [ref=e652]:
+          - generic [ref=e653]: Ask
+          - generic [ref=e654]: on-miss
+      - generic [ref=e655]:
+        - button "Allow once" [ref=e656] [cursor=pointer]
+        - button "Always allow" [ref=e657] [cursor=pointer]
+        - button "Deny" [ref=e658] [cursor=pointer]
