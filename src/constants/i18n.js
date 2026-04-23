@@ -55,6 +55,10 @@ export const I18N = {
     warehouse_filter: "Bodega",
     all_warehouses: "Todas las Bodegas",
     search_products: "Buscar productos...",
+    chat_tab: "Chat IA",
+    chat_placeholder: "Pregunta sobre un producto...",
+    ai_thinking: "MeBot está pensando...",
+    chat_welcome: "¡Hola! Soy MeBot. Puedo ayudarte a buscar productos, consultar stock o precios. ¿Qué necesitas?",
   },
   en: {
     scanner_title: "Inventory",

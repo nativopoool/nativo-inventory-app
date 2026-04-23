@@ -42,6 +42,7 @@ import { ScannerScreen } from './src/screens/ScannerScreen';
 import { HistoryScreen } from './src/screens/HistoryScreen';
 import { AboutScreen } from './src/screens/AboutScreen';
 import { CreateProductScreen } from './src/screens/CreateProductScreen';
+import { ChatScreen } from './src/screens/ChatScreen';
 
 // Global Error Handler for Native side
 if (!__DEV__) {
@@ -289,6 +290,13 @@ function AppContent({ onFatalError }) {
                   isSyncing={isSyncing}
                   onSyncPress={processQueue}
                   t={t}
+                />
+              )}
+
+              {activeTab === 'chat' && (
+                <ChatScreen 
+                  t={t}
+                  config={config}
                 />
               )}
             </View>

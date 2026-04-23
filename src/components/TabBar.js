@@ -2,11 +2,10 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import { BRAND, RADIUS, SHADOWS } from '../constants/brand';
 
-const TABS = [
   { id: 'scanner',  label: 'Escanear', icon: '📷' },
   { id: 'products', label: 'Productos', icon: '📦' },
+  { id: 'chat',     label: 'Chat IA',   icon: '💬' },
   { id: 'history',  label: 'Historial', icon: '📋' },
-  { id: 'about',    label: 'Acerca de', icon: 'ℹ️' },
   { id: 'settings', label: 'Config',    icon: '⚙️' },
 ];
 
